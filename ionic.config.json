@@ -1,0 +1,7 @@
+{
+  "name": "RegistraAppDiegoBarrios",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
