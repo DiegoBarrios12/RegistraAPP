@@ -1,0 +1,15 @@
+.qr-wrapper{
+    width: 230px;
+    min-height: 230px;
+    background-color: var(--ion-color-ternary);
+    border-radius: 20px;
+}
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.qr-imagen{
+    padding: 20px 0;
+}
