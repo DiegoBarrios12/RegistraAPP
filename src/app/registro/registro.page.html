@@ -20,7 +20,7 @@
     <ion-card-content>
       <form [formGroup]="formularioRegistro">
         <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="floating">Correo</ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>
         <ion-item>
@@ -44,6 +44,6 @@
 <ion-footer>
   <ion-toolbar color="primary"></ion-toolbar>
   <ion-buttons slot="end">
-    <ion-button [routerLink]="['/registro']"></ion-button>
+    <ion-button [routerLink]="['/login']"> iniciar sesion</ion-button>
   </ion-buttons>
 </ion-footer>

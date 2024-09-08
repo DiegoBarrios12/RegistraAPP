@@ -27,16 +27,21 @@ export class LoginPage implements OnInit {
       var f= this.formulariologin.value;
 
       var usuario = localStorage.getItem('usuario');
-        if (usuario !== null && JSON.parse(usuario).nombre == f.nombre && JSON.parse(usuario).contraseña == f.contraseña){
-            console.log('ingresado');
-          } else {
-          const alert = await this.alertController.create({
-          header: 'Datos incorrectos',
-          message: 'Debes llenar todos los campos o no existe usuario registrado',
-          buttons: ['Aceptar']
-        });
-          alert.present();
-        }
+      if (usuario !== null && JSON.parse(usuario).nombre == f.nombre && JSON.parse(usuario).contraseña == f.contraseña){
+      const alert = await this.alertController.create({
+      header: 'Datos correctos',
+      message: 'Tus datos han sido ingresados correctamente. Haz clic en el botón Ir a Asistencia al costado de Ingresar',
+      buttons: ['Aceptar']
+      });
+      alert.present();
+      } else {
+      const alert = await this.alertController.create({
+      header: 'Datos incorrectos',
+      message: 'Debes llenar todos los campos o no existe usuario registrado',
+      buttons: ['Aceptar']
+      });
+      alert.present();
+      }
 
       }
     }

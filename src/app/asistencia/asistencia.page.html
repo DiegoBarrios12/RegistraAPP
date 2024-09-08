@@ -1,11 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar  color="primary">
-    <ion-title><img src="assets/icon/LogoAPP.png" width=100px>
-      Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+
+    </ion-buttons>
+    <ion-title><img src="assets/icon/LogoAPP.png" width=100px></ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="ion-padding ion-text-center">
+<ion-card class="ion-padding ion-text-center" color="secondary">
+  Asistencia
+</ion-card>
+<ion-content color= "light" class="ion-padding ion-text-center">
   <ion-segment [(ngModel)]="escaner" mode="ios">
     <ion-segment-button value="scan">
       <ion-label>Asistencia QR</ion-label>
@@ -18,13 +23,19 @@
   Aca se escanea el qr
 </div>
 <div *ngIf="escaner=='generar'">
-  se genera el qr
+  <img src="assets/icon/qrPrueba.png">
 </div>
 <div class="escaner" *ngIf="escaner==='generar'">
   <div id="qrImagen">
     <div class="d-flex-center">
       <div class="d-flex-center qr wrapper">
-
+        <div class="qr-section">
+          <p>Presiona el botón para generar el código QR y compartir con los alumnos.</p>
+          <ion-button expand="block" color="primary">Generar QR</ion-button>
+        </div>
+        <div class="qr-code">
+         
+        </div>
       </div>
 
     </div>

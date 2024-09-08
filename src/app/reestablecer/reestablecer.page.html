@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title><img src="assets/icon/LogoAPP.png" width=100px></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-card color="light">
+      <ion-card-header>
+          <ion-card-title>Recuperar Contraseña</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-item>
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input type="email"></ion-input>
+          </ion-item>
+          <ion-button expand="full" color="primary">Recuperar</ion-button>
+          <ion-item>
+            <ion-label position="floating">Nueva Contraseña</ion-label>
+            <ion-input formControlName="contraseña" type="password"></ion-input>
+          </ion-item>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

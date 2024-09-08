@@ -19,7 +19,7 @@
     <ion-card-content>
       <form [formGroup]="formulariologin">
         <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="floating">Correo</ion-label>
           <ion-input formControlName="nombre"></ion-input>
         </ion-item>
         <ion-item>
@@ -29,11 +29,13 @@
         
       </form>
       <br>
-      <ion-button (click)="ingresar()">
+      <ion-button  color= "second"[routerLink]="['/asistencia']"><a>Ir a Asistencia </a></ion-button>
+      <ion-button  (click)="ingresar() ">
 
         Ingresar
         
       </ion-button>
+      <ion-button  color= "second"[routerLink]="['/reestablecer']"><a> Recuperar contraseña </a></ion-button>
 
     </ion-card-content>
   </ion-card>
@@ -41,6 +43,6 @@
 <ion-footer>
   <ion-toolbar color="primary"></ion-toolbar>
   <ion-buttons slot="end">
-    <ion-button [routerLink]="['/registro']"><a>Registrarse</a></ion-button>
+    <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
   </ion-buttons>
 </ion-footer>

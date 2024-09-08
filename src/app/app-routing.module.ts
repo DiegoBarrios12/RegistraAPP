@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'asistencia',
     loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
   },
+  {
+    path: 'reestablecer',
+    loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
+  },
 ];
 
 @NgModule({
