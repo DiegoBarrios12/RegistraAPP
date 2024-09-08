@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsistenciaPage implements OnInit {
   escaner = 'generar';
-
+  alumnos: { nombre: string, apellido: string, edad: string }[] = [];
+agregarAlumno() {
+  const nuevoAlumno = {
+    nombre: 'Nuevo Alumno',
+    apellido: 'Apellido',
+    edad: 'edad'
+  };
+  this.alumnos.push(nuevoAlumno);
+}
   constructor() { }
 
   ngOnInit() {

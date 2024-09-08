@@ -14,14 +14,20 @@
       </ion-card-header>
       <ion-card-content>
           <ion-item>
-              <ion-label position="floating">Correo Electrónico</ion-label>
-              <ion-input type="email"></ion-input>
-          </ion-item>
-          <ion-button expand="full" color="primary">Recuperar</ion-button>
+              <ion-label position="floating">Correo </ion-label>
+              <ion-input type="nombre"></ion-input>
           <ion-item>
             <ion-label position="floating">Nueva Contraseña</ion-label>
             <ion-input formControlName="contraseña" type="password"></ion-input>
+          <ion-item>
+            <ion-label position="floating">confirmar Contraseña</ion-label>
+            <ion-input formControlName="contraseña" type="password"></ion-input>
+            <ion-buttons slot="end">
+              <ion-button>Recuperar contraseña</ion-button>
+            </ion-buttons>
+          </ion-item>  
           </ion-item>
+        </ion-item>
       </ion-card-content>
   </ion-card>
 </ion-content>

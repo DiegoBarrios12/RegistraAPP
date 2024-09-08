@@ -18,8 +18,13 @@
     <ion-segment-button value="generar">
       <ion-label>crear QR</ion-label>
     </ion-segment-button>
+    <ion-segment-button value="alu"> <ion-label>Alumno</ion-label>
+    </ion-segment-button>
+      
   </ion-segment>
-<div *ngIf="escaner=='scan'">
+
+
+  <div *ngIf="escaner=='scan'">
   Aca se escanea el qr
 </div>
 <div *ngIf="escaner=='generar'">
@@ -42,4 +47,23 @@
 
   </div>
 </div>
+ <ion-list>
+  <div>
+    <ion-item *ngFor="alumno== generar"></ion-item>
+    <div>
+      <ion-item *ngFor="let alumno of alumnos">
+        <ion-label>{{ alumno.nombre }}</ion-label>
+        <ion-label>{{ alumno.apellido }}</ion-label>
+        <ion-label>{{ alumno.edad }}</ion-label>
+        
+      </ion-item>
+      <div>
+        <ion-button xpand="block" color="primary" (click) ="agregarAlumno()">Agregar Alumno</ion-button>
+      </div>
+      
+    </div>
+  </div>
+
+</ion-list>
+
 </ion-content>
