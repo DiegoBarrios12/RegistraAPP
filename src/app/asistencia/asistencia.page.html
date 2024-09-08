@@ -28,7 +28,7 @@
   Aca se escanea el qr
 </div>
 <div *ngIf="escaner=='generar'">
-  <img src="assets/icon/qrPrueba.png">
+ 
 </div>
 <div class="escaner" *ngIf="escaner==='generar'">
   <div id="qrImagen">
@@ -36,9 +36,11 @@
       <div class="d-flex-center qr wrapper">
         <div class="qr-section">
           <p>Presiona el botón para generar el código QR y compartir con los alumnos.</p>
-          <ion-button expand="block" color="primary">Generar QR</ion-button>
+          <ion-button expand="block" color="primary" (click)="showQRCode()">Generar QR</ion-button>
         </div>
-        <div class="qr-code">
+        <div class="qr-code" *ngIf="qrVisible" [@fadeInAnimation]>
+        <img src="assets/icon/qrPrueba.png" />
+        </div>
          
         </div>
       </div>
@@ -46,22 +48,18 @@
     </div>
 
   </div>
-</div>
+
  <ion-list>
-  <div>
-    <ion-item *ngFor="alumno== generar"></ion-item>
-    <div>
+  <div *ngIf="escaner === 'alu'">
+    <ion-list>
       <ion-item *ngFor="let alumno of alumnos">
         <ion-label>{{ alumno.nombre }}</ion-label>
         <ion-label>{{ alumno.apellido }}</ion-label>
         <ion-label>{{ alumno.edad }}</ion-label>
-        
       </ion-item>
-      <div>
-        <ion-button xpand="block" color="primary" (click) ="agregarAlumno()">Agregar Alumno</ion-button>
-      </div>
-      
-    </div>
+    </ion-list>
+
+    <ion-button expand="block" color="primary" (click)="agregarAlumno()">Agregar Alumno</ion-button>
   </div>
 
 </ion-list>
